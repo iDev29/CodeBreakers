@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kisan Saarthi 🌾</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌾 Kisan Saarthi</h1>
+    <p>आपका AI खेती सहायक</p>
+  </header>
+
+  <main>
+
+    <!-- FEATURE 1: Field Scan -->
+    <section id="scan-section">
+      <h2>📷 फसल स्कैन करें</h2>
+      <input type="file" id="crop-image" accept="image/*" capture="environment">
+      <button onclick="scanCrop()">बीमारी जांचें</button>
+      <div id="scan-result"></div>
+    </section>
+
+    <!-- FEATURE 2: Voice / Text Ask -->
+<section id="voice-section">
+  <h2>🎤 सवाल पूछें</h2>
+  <input type="text" id="question-input" 
+         placeholder="जैसे: गेहूं में कीड़े लग गए हैं क्या करें?">
+  <div style="display:flex; gap:10px; margin-top:10px;">
+    <button onclick="askQuestion()">📨 जवाब पाएं</button>
+    <button id="mic-btn" onclick="startListening()">🎤 बोलें</button>
+  </div>
+  <div id="voice-result"></div>
+</section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
